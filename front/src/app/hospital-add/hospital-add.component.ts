@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-hospital-add',
@@ -7,7 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HospitalAddComponent implements OnInit {
 
-  constructor() { }
+  adicionarHospitalForm: FormGroup;
+
+  constructor(private formBuider: FormBuilder) { 
+    this.createForm();
+  }
+
+  /**
+   * Método responsável por tratar as validações do Form que criará uma novo Hospital.
+   */
+  createForm() {
+    this.adicionarHospitalForm = this.formBuider.group({
+      nomeHospital: ['', Validators.required],
+      horarioHospital: ['', Validators.required],
+      enderecoHospital: ['', Validators.required],
+      telefoneHospital: ['', Validators.required]
+    });
+  }
 
   ngOnInit(): void {
   }
