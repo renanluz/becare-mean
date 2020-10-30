@@ -6,7 +6,7 @@
                     <label>
                         Nome
                     </label>
-                    <input type="text" class="form-control" formControlName="nomeHospital">
+                    <input type="text" class="form-control" formControlName="nomeHospital" #nomeHospital>
                 </div>
                 <div *ngIf="adicionarHospitalForm.controls['nomeHospital'].invalid 
                         && (adicionarHospitalForm.controls['nomeHospital'].dirty 
@@ -20,7 +20,7 @@
                     <label>
                         Funcionamento
                     </label>
-                    <input placeholder="Segunda à sexta-feira, das 7h às 17h" type="text" class="form-control" formControlName="horarioHospital">
+                    <input placeholder="Segunda à sexta-feira, das 7h às 17h" type="text" class="form-control" formControlName="horarioHospital" #horarioFuncionamento>
                 </div>
                 <div *ngIf="adicionarHospitalForm.controls['horarioHospital'].invalid 
                         && (adicionarHospitalForm.controls['horarioHospital'].dirty 
@@ -34,7 +34,7 @@
                     <label>
                         Endereço
                     </label>
-                    <input type="text" class="form-control" formControlName="enderecoHospital">
+                    <input type="text" class="form-control" formControlName="enderecoHospital" #enderecoHospital>
                 </div>
                 <div *ngIf="adicionarHospitalForm.controls['enderecoHospital'].invalid 
                         && (adicionarHospitalForm.controls['enderecoHospital'].dirty 
@@ -48,7 +48,7 @@
                     <label>
                         Telefone
                     </label>
-                    <input type="text" class="form-control" formControlName="telefoneHospital">
+                    <input type="text" class="form-control" formControlName="telefoneHospital" #telefoneHospital> 
                 </div>
                 <div *ngIf="adicionarHospitalForm.controls['telefoneHospital'].invalid 
                         && (adicionarHospitalForm.controls['telefoneHospital'].dirty 
