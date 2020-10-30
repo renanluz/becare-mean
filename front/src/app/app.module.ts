@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
+import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +20,8 @@ import { HospitalGetComponent } from './hospital-get/hospital-get.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SlimLoadingBarModule
+    SlimLoadingBarModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
